@@ -212,6 +212,11 @@
       if (data === undefined) {
         $this.data('simplecolorpicker', (data = new SimpleColorPicker(this, options)));
       }
+      /* Added selectColor option with other options */
+      if (option.selectColor) {
+          args.push(option.selectColor);
+          option = 'selectColor';
+      }
       if (typeof option === 'string') {
         data[option].apply(data, args);
       }
