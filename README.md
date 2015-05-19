@@ -63,8 +63,10 @@ $('select[name="colorpicker"]').simplecolorpicker({
 - picker: show the colors inside a picker instead of inline (default: `false`)
 - pickerDelay: show and hide animation delay in milliseconds (default: `0`)
 - 
+
 #### Added selectColor option
-Now y
+Now is possible to use selectColor with other options:
+
 ```JavaScript
 $('select[name="colorpicker"]')
   .simplecolorpicker({ theme: 'glyphicons', selectColor: '#e1e1e1' })
@@ -72,6 +74,7 @@ $('select[name="colorpicker"]')
     $(document.body).css('background-color', $('select[name="colorpicker"]').val());
   });
 ```
+
 ## Browser support
 
 Simplecolorpicker supports all modern browsers starting with Internet Explorer 8 included.
