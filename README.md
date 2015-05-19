@@ -62,7 +62,16 @@ $('select[name="colorpicker"]').simplecolorpicker({
 - theme: font to use for the ok/check mark (default: `''`), available themes: [`regularfont`](https://github.com/tkrotoff/jquery-simplecolorpicker/blob/master/jquery.simplecolorpicker-regularfont.css), [`fontawesome`](https://github.com/tkrotoff/jquery-simplecolorpicker/blob/master/jquery.simplecolorpicker-fontawesome.css), [`glyphicons`](https://github.com/tkrotoff/jquery-simplecolorpicker/blob/master/jquery.simplecolorpicker-glyphicons.css)
 - picker: show the colors inside a picker instead of inline (default: `false`)
 - pickerDelay: show and hide animation delay in milliseconds (default: `0`)
-
+- 
+#### Added selectColor option
+Now y
+```JavaScript
+$('select[name="colorpicker"]')
+  .simplecolorpicker({ theme: 'glyphicons', selectColor: '#e1e1e1' })
+  .on('change', function() {
+    $(document.body).css('background-color', $('select[name="colorpicker"]').val());
+  });
+```
 ## Browser support
 
 Simplecolorpicker supports all modern browsers starting with Internet Explorer 8 included.
